@@ -5,7 +5,7 @@
 import java.util.Scanner;
 public class EdadVotar {
     //Declaro la edad minima para votar como constante
-    private static int edadVotar = 18;
+    private static final int edadVotar = 18;
     public static void main(String[] args) {
 
         //declaramos las variables a utilizar: nombre, edad y esNumero para verificar si la edad es numerica.
