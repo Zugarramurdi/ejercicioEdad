@@ -5,14 +5,14 @@
 import java.util.Scanner;
 public class EdadVotar {
     //Declaro la edad minima para votar como constante
-    private static final int edadVotar = 18;
+    private static final int EDAD_VOTAR = 18;
     public static void main(String[] args) {
 
         //declaramos las variables a utilizar: nombre, edad y esNumero para verificar si la edad es numerica.
         int edad = 0;
         String nombre = "";
         boolean esNumero = false;
-
+        
         //Instanciamos Scanner
         Scanner sc = new Scanner(System.in);
 
@@ -34,7 +34,7 @@ public class EdadVotar {
             if (sc.hasNextInt()) {
                 edad = sc.nextInt();
                 esNumero = true;  //Si la edad es numerica, esNumero es true u se verifica si es mayor de edad o no, devolviendo un mensaje con el nombre y si puede votar o no.
-                if (edad >= edadVotar) {
+                if (edad >= EDAD_VOTAR) {
                     System.out.println("Hola " + nombre + ", puedes votar :)");
                 } else {
                     System.out.println("Hola " + nombre + ", no puedes votar :(");
@@ -43,7 +43,7 @@ public class EdadVotar {
                 System.out.println("Edad no valida, tiene que ser numerica, intente de nuevo");
                 sc.next();
             }
-        }while (esNumero == false);
+        }while (!esNumero);
 
         sc.close();
     }
